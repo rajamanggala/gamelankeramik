@@ -1,0 +1,77 @@
+:root{--ink:#1A1714;--ivory:#F3EDE2;--red:#A8382E;--teak:#B5703C;--panel:#EAE2D3;--line:#d8cfbf;--muted:#5c554d;
+--bs-body-font-family:Lato,system-ui,sans-serif;--bs-body-bg:var(--ivory);--bs-body-color:var(--ink);--bs-link-color:var(--red);--bs-link-hover-color:#7d2820}
+html{scroll-behavior:smooth}
+body{font-size:1.0625rem;line-height:1.7}
+h1,h2,h3,h4,.display-gk{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.01em}
+h1{font-weight:700}
+.lead{font-size:1.25rem}
+.text-muted-gk{color:var(--muted)}
+.measure{max-width:62ch}
+:focus-visible{outline:3px solid var(--teak)!important;outline-offset:3px}
+.btn-gk{background:var(--red);color:var(--ivory);border:2px solid var(--red);border-radius:2px;padding:.65rem 1.5rem;font-weight:700}
+.btn-gk:hover{background:#7d2820;border-color:#7d2820;color:var(--ivory)}
+.btn-line{border:2px solid currentColor;color:inherit;border-radius:2px;padding:.65rem 1.5rem;font-weight:700}
+.btn-line:hover{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.on-dark .btn-line:hover{background:var(--ivory);color:var(--ink);border-color:var(--ivory)}
+/* navbar */
+.gk-nav{background:rgba(243,237,226,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.gk-nav .navbar-brand img{height:44px;width:auto}
+.gk-nav .nav-link{color:var(--ink);font-weight:400;padding:.5rem 1rem;border-bottom:2px solid transparent}
+.gk-nav .nav-link:hover,.gk-nav .nav-link.active{color:var(--ink);border-bottom-color:var(--red)}
+.lang-pill{font-size:.9rem;color:var(--muted)}
+/* hero */
+.on-dark{color:var(--ivory)}
+.hero{min-height:calc(100vh - 69px);display:flex;align-items:center;background:linear-gradient(100deg,rgba(26,23,20,.94) 8%,rgba(26,23,20,.55) 70%),url(../img/photos/marble-blade.jpg) center/cover;color:var(--ivory)}
+.hero img.mark{height:84px;margin-bottom:1.5rem;user-select:none;-webkit-user-select:none;pointer-events:none}
+.hero h1{font-size:clamp(3rem,8vw,6.5rem);margin-bottom:1.25rem}
+.page-head{background:var(--ink);color:var(--ivory);padding:4.5rem 0 3.5rem;border-bottom:4px solid var(--red)}
+.page-head h1{font-size:clamp(2.6rem,7vw,4.5rem);margin:0 0 .75rem}
+.page-head p{margin:0;max-width:60ch;color:#d9d0c1}
+section.pad{padding:5.5rem 0}
+.bg-panel{background:var(--panel)}
+.rule{width:64px;height:3px;background:var(--red);margin:1rem 0 1.5rem;border:0;opacity:1}
+.ph-img{width:100%;height:auto;display:block;background:var(--ink)}
+.frame{border:1px solid var(--line);padding:10px;background:#faf6ee}
+/* blades */
+.blades-wrap{background:var(--ink);color:var(--ivory);border-radius:4px;padding:2rem 1.5rem 1.5rem}
+.blades{display:flex;gap:10px;justify-content:center;align-items:flex-start;height:300px;touch-action:manipulation}
+.blades.sm{height:210px;gap:7px}
+.blade{flex:1 1 0;max-width:74px;border:0;padding:0;cursor:pointer;border-radius:3px;background:url(../img/photos/marble-blade.jpg) calc(var(--i)*17%) calc(var(--i)*11%)/cover;box-shadow:inset 0 0 0 3px rgba(243,237,226,.55),inset 0 -10px 18px rgba(26,23,20,.35),0 5px 0 var(--teak);transition:filter .15s}
+.blade:hover{filter:brightness(1.12)}
+.blade.hit{animation:hit .55s}
+@keyframes hit{20%{transform:translateY(6px) rotate(-1.2deg)}50%{transform:translateY(-2px) rotate(.7deg)}}
+@media (prefers-reduced-motion:reduce){.blade.hit{animation:none;transform:translateY(3px)}html{scroll-behavior:auto}}
+.hint{font-size:.9rem;color:#b9afa0;margin:1rem 0 0;text-align:center}
+/* cards */
+.gk-card{background:#faf6ee;border:1px solid var(--line);height:100%;transition:border-color .2s,transform .2s;display:block;text-decoration:none;color:inherit}
+a.gk-card:hover{border-color:var(--red);transform:translateY(-3px);color:inherit}
+.gk-card .body{padding:1.25rem 1.4rem 1.5rem}
+.gk-card h3{font-size:1.65rem;margin:.25rem 0 .5rem}
+.tag{display:inline-block;font-size:.82rem;font-weight:700;color:var(--red);letter-spacing:.02em}
+.meta{font-size:.9rem;color:var(--muted)}
+.thumb{position:relative}
+.thumb.video::after{content:"";position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(168,56,46,.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23F3EDE2' d='M9 6.5v11l9-5.5z'/%3E%3C/svg%3E") center/34px no-repeat}
+.spec{display:grid;grid-template-columns:9.5rem 1fr;gap:.55rem 1rem;margin:1.25rem 0;padding:1.25rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.spec dt{font-weight:400;color:var(--muted)}.spec dd{margin:0;font-weight:700}
+.step{border-left:3px solid var(--red);padding:.2rem 0 .2rem 1.25rem;height:100%}
+.step h3{font-size:1.5rem}
+.band-red{background:var(--red);color:var(--ivory);padding:4rem 0}
+.band-red .btn-line:hover{background:var(--ivory);color:var(--red);border-color:var(--ivory)}
+.person img{border-bottom:4px solid var(--red)}
+.filters .btn{border-radius:999px;border:1px solid var(--ink);color:var(--ink);padding:.4rem 1.1rem;margin:0 .4rem .6rem 0}
+.filters .btn.active{background:var(--ink);color:var(--ivory)}
+.gloss dt{font-family:"Cormorant Garamond",serif;font-size:1.4rem;font-weight:600}
+.gloss dd{margin:0 0 1rem;color:var(--muted)}
+.prose p{font-size:1.15rem;line-height:1.85;max-width:66ch}
+.prose h2{font-size:2.2rem;margin:2.5rem 0 .75rem}
+blockquote.pull{font-family:"Cormorant Garamond",serif;font-size:2rem;font-weight:500;font-style:italic;border-left:4px solid var(--red);padding:.25rem 0 .25rem 1.5rem;margin:2.5rem 0;max-width:30ch}
+#wave{width:100%;height:160px;background:var(--ink);border-radius:4px;display:block}
+footer.gk-foot{background:var(--ink);color:#d9d0c1;padding:4rem 0 2rem}
+footer.gk-foot a{color:#d9d0c1;text-decoration:none}footer.gk-foot a:hover{color:var(--ivory);text-decoration:underline}
+footer.gk-foot h4{color:var(--ivory);font-size:1.3rem}
+footer .logo-foot{height:96px;width:auto}
+.form-control,.form-select{border-radius:2px;border-color:#b9ae9c;background:#faf6ee;padding:.7rem .9rem}
+.form-control:focus,.form-select:focus{border-color:var(--red);box-shadow:0 0 0 .2rem rgba(168,56,46,.18)}
+
+.hero-logo{margin:0 0 1.75rem}
+.hero-logo img{display:block;width:min(100%,820px);height:auto;user-select:none;-webkit-user-select:none}
